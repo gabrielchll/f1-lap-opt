@@ -6,8 +6,6 @@ Optimal control of a hybrid Formula 1 car (point-mass model, ICE + MGU-K) around
 
 ![Optimal lap at Austin](docs/austin.png)
 
-*The torque spikes and the ~20 km/h minimum speed near the end of the lap come from the polynomial torque fits being extrapolated below 26 m/s (known limitation, see below).*
-
 ## Results
 
 Predicted lap times vs. **2026 pole position laps**, with **the same car parameters on every circuit** (no per-track tuning). A pole lap is a single flying lap on fresh tyres and low fuel, which is the scenario the optimizer models (no traffic, no tyre degradation).
