@@ -74,3 +74,4 @@ def T_MGUK_max(x) :
 
 def T_ICE_max(x) :
     return polynome(C_ICE, x)
+

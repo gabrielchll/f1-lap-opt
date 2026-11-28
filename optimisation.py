@@ -174,7 +174,9 @@ def solve_lap(track):
         lbg = np.r_[np.full(2*(track.n-1), -np.inf), np.zeros(track.n-1), np.full(2*track.n, -np.inf), np.zeros(track.n), np.zeros(track.n-1), 0.0, 0.0],
         ubg = np.r_[np.zeros(2*(track.n-1)), np.zeros(track.n-1), np.zeros(2*track.n), np.full(track.n, np.inf), np.zeros(track.n-1), 0.0, 0.0])
 
-    print(solver.stats()['return_status']) 
+    stats = solver.stats()
+
+    print(stats['return_status']) 
     
     return solution
 
@@ -247,8 +249,9 @@ def acceleration(track, v):
     T = heading_change(v, track.n)
     return np.r_[0, np.reshape(np.sqrt(A**2 + ((V[1:]+V[0:-1])/2)**2*(T/dt)**2), track.n-1)]
 
+
 if __name__ == "__main__":
+
     austin = Track("Austin")
     sol = solve_lap(austin)
     plot_results(austin, sol)
-
