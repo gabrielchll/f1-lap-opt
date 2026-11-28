@@ -48,7 +48,7 @@ These results should be read as a validation of the order of magnitude and of th
 - Simplified energy management: the battery level is not forced to be cyclic over the lap, and there is no harvesting efficiency or deployment strategy imposed by the regulations.
 
 **4. Optimizer vs. reality**
-- The optimizer is a *perfect driver*: it finds the global-quality optimum for the model, whereas a real pole lap contains small driver errors, compromises for tyre warm-up and traffic management.
+- The optimizer is a *perfect driver*: it finds the mathematically optimal trajectory for the model, whereas a real pole lap contains small driver errors, compromises for tyre warm-up and traffic management.
 - Real pole laps are one sample: they depend on the session conditions and on what each driver extracts on the day.
 
 Errors of different signs partially compensate: a model that is too optimistic in grip can be offset by one that is too pessimistic in power, so a small error on one circuit is not proof that the model is accurate there.
@@ -95,8 +95,8 @@ $$\left(m a_k + \tfrac12 \rho S C_x V^2\right)^2 + \left(m V \dot\theta\right)^2
 ## Getting started
 
 ```bash
-git clone <repo-url>
-cd <repo>
+git clone https://github.com/gabrielchll/f1-lap-time-optimization.git
+cd f1-lap-time-optimization
 pip install -r requirements.txt
 python optimisation.py
 ```
